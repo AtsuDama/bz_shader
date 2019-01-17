@@ -37,10 +37,6 @@ void setup() {
       pg.pixels[loc] = color(random(255), random(255), random(255));
     }
   }
-  //pg.background(0, 255, 255);
-  //pg.noStroke();
-  //pg.fill(255, 0, 0);
-  //pg.ellipse(width / 2, height / 2, 100, 100);
   pg.updatePixels();
   pg.endDraw();
 }
