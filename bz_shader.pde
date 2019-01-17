@@ -30,10 +30,18 @@ void setup() {
   ps.set("beta", beta);
   ps.set("gamma", gamma);
   pg.beginDraw();
-  pg.background(0, 255, 255);
-  pg.noStroke();
-  pg.fill(255, 0, 0);
-  pg.ellipse(width / 2, height / 2, 10, 10);
+  pg.loadPixels();
+  for (int y = 0; y < height; y++) {
+    for (int x = 0; x < width; x++) {
+      int loc = x + y * width;
+      pg.pixels[loc] = color(random(255), random(255), random(255));
+    }
+  }
+  //pg.background(0, 255, 255);
+  //pg.noStroke();
+  //pg.fill(255, 0, 0);
+  //pg.ellipse(width / 2, height / 2, 100, 100);
+  pg.updatePixels();
   pg.endDraw();
 }
 
