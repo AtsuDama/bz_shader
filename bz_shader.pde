@@ -15,10 +15,21 @@ void setup() {
   size(800, 800, P2D);
   pixelDensity(1);
   cp5 = new ControlP5(this);
-  sAlpha = cp5.addSlider("alpha", 0.0, 1.2, 1.0, 10, 10, 200, 20);
-  sBeta = cp5.addSlider("beta", 0.0, 1.2, 1.0, 10, 40, 200, 20);
-  sGamma = cp5.addSlider("gamma", 0.0, 1.2, 1.0, 10, 70, 200, 20);
-
+  sAlpha = cp5.addSlider("alpha")
+              .setRange(0.0, 1.0)
+              .setPosition(10, 10)
+              .setSize(200, 20)
+              .setValue(1.0);
+  sBeta = cp5.addSlider("beta")
+             .setRange(0.0, 1.0)
+             .setPosition(10, 40)
+             .setSize(200, 20)
+             .setValue(1.0);
+  sGamma = cp5.addSlider("gamma")
+              .setRange(0.0, 1.0)
+              .setPosition(10, 70)
+              .setSize(200, 20)
+              .setValue(1.0);
   alpha = sAlpha.getValue();
   beta = sBeta.getValue();
   gamma = sGamma.getValue();
