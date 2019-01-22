@@ -40,16 +40,7 @@ void setup() {
   ps.set("alpha", alpha);
   ps.set("beta", beta);
   ps.set("gamma", gamma);
-  pg.beginDraw();
-  pg.loadPixels();
-  for (int y = 0; y < height; y++) {
-    for (int x = 0; x < width; x++) {
-      int loc = x + y * width;
-      pg.pixels[loc] = color(random(255), random(255), random(255));
-    }
-  }
-  pg.updatePixels();
-  pg.endDraw();
+  initialize();
 }
 
 void draw() {
@@ -66,4 +57,23 @@ void draw() {
   pg.endDraw();
   image(pg, 0, 0, width, height);
   filter(pass);
+}
+
+void initialize() {
+  pg.beginDraw();
+  pg.loadPixels();
+  for (int y = 0; y < height; y++) {
+    for (int x = 0; x < width; x++) {
+      int loc = x + y * width;
+      pg.pixels[loc] = color(random(255), random(255), random(255));
+    }
+  }
+  pg.updatePixels();
+  pg.endDraw();
+}
+
+void keyPressed() {
+  if (key == 'r') {
+    initialize();
+  }
 }
