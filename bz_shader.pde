@@ -16,17 +16,17 @@ void setup() {
   pixelDensity(1);
   cp5 = new ControlP5(this);
   sAlpha = cp5.addSlider("alpha")
-              .setRange(0.0, 1.0)
+              .setRange(0.0, 2.0)
               .setPosition(10, 10)
               .setSize(200, 20)
               .setValue(1.0);
   sBeta = cp5.addSlider("beta")
-             .setRange(0.0, 1.0)
+             .setRange(0.0, 2.0)
              .setPosition(10, 40)
              .setSize(200, 20)
              .setValue(1.0);
   sGamma = cp5.addSlider("gamma")
-              .setRange(0.0, 1.0)
+              .setRange(0.0, 2.0)
               .setPosition(10, 70)
               .setSize(200, 20)
               .setValue(1.0);
