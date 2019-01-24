@@ -1,5 +1,6 @@
 import controlP5.*;
 ControlP5 cp5;
+//import gifAnimation.*;
 
 Slider sAlpha;
 Slider sBeta;
@@ -11,9 +12,12 @@ float alpha;
 float beta;
 float gamma;
 
+GifMaker gifExport;
+
 void setup() {
-  size(800, 800, P2D);
+  size(400, 400, P2D);
   pixelDensity(1);
+  //frameRate(25);
   cp5 = new ControlP5(this);
   sAlpha = cp5.addSlider("Alpha")
               .setRange(0.0, 2.0)
@@ -41,6 +45,7 @@ void setup() {
   ps.set("beta", beta);
   ps.set("gamma", gamma);
   initialize();
+  //captureSetup();
 }
 
 void draw() {
@@ -51,12 +56,13 @@ void draw() {
   ps.set("beta", beta);
   ps.set("gamma", gamma);
   pg.beginDraw();
-  for (int i = 0; i < 1; i++) {
+  for (int i = 0; i < 2; i++) {
   pg.filter(ps);
   }
   pg.endDraw();
   image(pg, 0, 0, width, height);
   filter(pass);
+  //capture();
 }
 
 void initialize() {
@@ -71,6 +77,23 @@ void initialize() {
   pg.updatePixels();
   pg.endDraw();
 }
+
+//setup for video capture (gif)
+//void captureSetup() {
+//  gifExport = new GifMaker(this, "gif/example.gif");
+//  gifExport.setRepeat(0);
+//  gifExport.setQuality(1);
+//  gifExport.setDelay(40);
+//}
+
+//video capture
+//void capture() {
+//  if (frameCount <= 150) {
+//    gifExport.addFrame();
+//  } else {
+//    gifExport.finish();
+//  }
+//}
 
 void keyPressed() {
   if (key == 'r') {
