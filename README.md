@@ -2,7 +2,7 @@
 Simple Belousov-Zhabotinsky(BZ) reaction simulator with shader on Processing.
 
 ## Screenshots
-<img src = "img/example/example.gif" width = "300">
+<p align = "center"><img src = "img/example/example.gif" width = "300"></p>
 
 ## Model
 A simple model for BZ reaction has been proposed by A. Turner [1]. We assume that three chemical substances react following the chemical equations described below.
