@@ -12,12 +12,12 @@ float alpha;
 float beta;
 float gamma;
 
-GifMaker gifExport;
+//GifMaker gifExport;
 
 void setup() {
-  size(400, 400, P2D);
+  size(800, 800, P2D);
   pixelDensity(1);
-  //frameRate(25);
+  frameRate(60);
   cp5 = new ControlP5(this);
   sAlpha = cp5.addSlider("Alpha")
               .setRange(0.0, 2.0)
@@ -56,7 +56,7 @@ void draw() {
   ps.set("beta", beta);
   ps.set("gamma", gamma);
   pg.beginDraw();
-  for (int i = 0; i < 2; i++) {
+  for (int i = 0; i < 1; i++) {
   pg.filter(ps);
   }
   pg.endDraw();
