@@ -13,7 +13,7 @@ A simple model for BZ reaction has been proposed by A. Turner [1]. We assume tha
 
 <img src = "img/eq/eq_03.svg">
 
-where _α_, _β_, and _γ_ denote the rate constants of the chemacal reactions, respectively. The concentrations of the substances at _t_ + 1, _a_<sub>_t_+1</sub>, _b_<sub>_t_+1</sub>, and _c_<sub>_t_+1</sub> are expressed by those at _t_, _a_<sub>_t_</sub>, _b_<sub>_t_</sub>, and _c_<sub>_t_</sub>, respectively.
+where _α_, _β_, and _γ_ denote the rate constants of the chemical reactions, respectively. The concentrations of the substances at _t_ + 1, _a_<sub>_t_+1</sub>, _b_<sub>_t_+1</sub>, and _c_<sub>_t_+1</sub> are expressed by those at _t_, _a_<sub>_t_</sub>, _b_<sub>_t_</sub>, and _c_<sub>_t_</sub>.
 
 <img src = "img/eq/eq_04.svg">
 
